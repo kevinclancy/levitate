@@ -28,7 +28,7 @@ In addition to basic arithmetic operators, controlled rounding for the exponent,
 
 ## Interval and affine arithmetic.
 
-The interval and affine arithmetic schemes described in (Self-validated Numerical Methods and Applications)[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.36.8089&rep=rep1&type=pdf] have been implemented in the Interval and Affine modules, respectively.
+The interval and affine arithmetic schemes described in [Self-validated Numerical Methods and Applications](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.36.8089&rep=rep1&type=pdf) have been implemented in the Interval and Affine modules, respectively.
 
 The Interval.Interval datatype has a constructor E for empty intervals, and another constructor I for non-empty intervals. The low endpoint of an interval is accessed using the lp function and the high endpoint is accessed using the hp function. Basic arithmetic operators are suffixed with !: (+!) is used for interval addition, (/!) is used for interval addition, etc.
 
