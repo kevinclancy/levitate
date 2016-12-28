@@ -1,0 +1,47 @@
+name:           levitate
+version:        0.1
+cabal-version:  >=1.10
+build-type:     Simple
+author:         Kevin Clancy
+
+executable levitate
+  default-language: Haskell98
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4,
+                   QuickCheck >= 2.8.2,
+                   mtl,
+                   containers,
+                   HUnit
+
+  c-sources: src/levitate.c, src/levitateDouble.c
+  ghc-options:     -Wall "-with-rtsopts=-xc" -fprof-auto
+
+library
+  default-language: Haskell98
+  hs-source-dirs:  src
+  exposed-modules: Interval, Affine, Levitate, LevitateDouble
+  build-depends:   
+                   base >= 4,
+                   QuickCheck >= 2.8.2,
+                   HUnit,
+                   mtl,
+                   containers
+
+  c-sources: src/levitate.c, src/levitateDouble.c
+	          
+  ghc-options:     -Wall "-with-rtsopts=-xc" -fprof-auto
+
+executable tests
+  default-language: Haskell98
+  hs-source-dirs:    tests
+  main-is:           Test.hs
+  build-depends: base >= 4,
+                 levitate,
+                 QuickCheck >= 2.8.2,
+                 HUnit
+  ghc-options: -Wall "-with-rtsopts=-xc" -fprof-auto
+   
+
+
