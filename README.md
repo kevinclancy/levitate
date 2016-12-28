@@ -20,6 +20,8 @@ cabal run tests
 
 # Overview
 
+This library is intended for the implementation of experimental numerical verification tools. As such, it is optimized for readability and simplicity rather than performance. Each controlled rounding operator records the current rounding mode, changes to the specified one, performs the operation, and then restores the original rounding mode. It isn't very efficient, but it allows a simple programming interface.
+
 ## Controlled rounding
 
 The Levitate module provides double-precision floating-point operators with controlled rounding. (+↑) is used for upward-rounded addtion, (+↓) for downward-rounded addition, etc. For a smooth experience using these operators, you will want an editor with unicode support. I use [xah math input mode](http://ergoemacs.org/emacs/xmsi-math-symbols-input.html).
